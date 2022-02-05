@@ -1,0 +1,141 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".">
+
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:id="@+id/tab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TableRow>
+                        <EditText
+                            android:id="@+id/InputName"
+                            android:layout_width="151dp"
+                            android:layout_height="45dp"
+                            android:padding="3dp"
+                            android:layout_weight="1"
+                            android:hint="製品名" />
+
+                        <EditText
+                            android:id="@+id/InputMin"
+                            android:layout_width="151dp"
+                            android:layout_height="45dp"
+                            android:padding="3dp"
+                            android:layout_weight="1"
+                            android:hint="最低個数" />
+
+                        <EditText
+                            android:id="@+id/InputQuantity"
+                            android:layout_width="151dp"
+                            android:layout_height="45dp"
+                            android:padding="3dp"
+                            android:layout_weight="1"
+                            android:hint="在庫数" />
+
+
+                    </TableRow>
+
+                    <TableRow>
+                        <!--<Button
+                            android:id="@+id/editTab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="表示" />-->
+
+                        <Button
+                            android:id="@+id/addTab1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="追加"
+                            android:onClick="saveData"/>
+                    </TableRow>
+
+
+
+                    <!--<TableRow>
+
+                        <TextView
+                            android:id="@+id/TV"
+                            android:layout_width="match_parent"
+                            android:textSize="20dp"/>
+                    </TableRow>-->
+
+
+
+                    <LinearLayout android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/listView1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </TableLayout>
+
+                <TableLayout
+                    android:id="@+id/tab2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableRow>
+                        <Button
+                            android:id="@+id/editTab2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="編集" />
+
+                        <TextView
+                            android:id="@+id/emptyText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+                        <ListView
+                            android:id="@+id/listView2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </TableRow>
+                </TableLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</RelativeLayout>
